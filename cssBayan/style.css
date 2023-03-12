@@ -9,6 +9,7 @@ html body {
   color: #1D1D1D;
   background: #64badd;
   box-sizing: border-box;
+  color: blue;
 }
 
 .container {
@@ -21,5 +22,60 @@ html body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 100vh;  
+}
+
+.accordion{
+    cursor: pointer;
+}
+
+.accordion-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.accordion:hover .accordion-item{
+    border: 2px solid #000;
+}
+
+.accordion-title{
+    display: block;
+    cursor: pointer;
+    padding: 5px 120px 5px 20px;
+
+}
+
+.accordion:hover{
+    color: #000;
+}
+
+.accordion:hover .icon{
+    display: block;
+}
+.icon{
+  display: none;
+  width: 5vh;
+  height: 5vh;
+}
+
+.accordion-input{
+    appearance: none;
+}
+
+.accordion-input:checked ~ .accordion-img{
+  display: block;
+  z-index: 10;
+}
+
+.accordion-img{
+    display: none;
+    width: 40vh;
+    height: 40vh;  
+    cursor: pointer; 
 }
 
